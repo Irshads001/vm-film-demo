@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Film — Профессиональная видеосъемка | Кишинёв • Тирасполь</title>
+    <meta name="description" content="Профессиональная видеосъемка свадеб, рекламы и контента. Вадик Мунжиу — VM Film, Кишинёв и Тирасполь, Молдова.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">VM</div>
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-v">V</span><span class="logo-m">M</span>
+                <span class="logo-divider"></span>
+                <span class="logo-text">film</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active" data-section="hero">Главная</a>
+                <a href="#portfolio" class="nav-link" data-section="portfolio">Портфолио</a>
+                <a href="#services" class="nav-link" data-section="services">Услуги</a>
+                <a href="#about" class="nav-link" data-section="about">Обо мне</a>
+                <a href="#contact" class="nav-link" data-section="contact">Контакт</a>
+            </div>
+            <a href="#contact" class="nav-cta">Забронировать</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#hero" class="mobile-link">Главная</a>
+            <a href="#portfolio" class="mobile-link">Портфолио</a>
+            <a href="#services" class="mobile-link">Услуги</a>
+            <a href="#about" class="mobile-link">Обо мне</a>
+            <a href="#contact" class="mobile-link">Контакт</a>
+            <a href="#contact" class="mobile-cta">Забронировать дату</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero-wedding.jpg" alt="VM Film Wedding Cinematography" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                Кишинёв • Тирасполь • Молдова
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line reveal-up" style="--delay: 0.1s">Кино из ваших</span>
+                <span class="title-line title-italic reveal-up" style="--delay: 0.25s">лучших моментов</span>
+            </h1>
+            <p class="hero-subtitle reveal-up" style="--delay: 0.4s">
+                Профессиональная видеосъемка свадеб, рекламных роликов и контента. Каждый кадр — произведение искусства.
+            </p>
+            <div class="hero-actions reveal-up" style="--delay: 0.55s">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>Смотреть работы</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Связаться</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+        <div class="hero-stats">
+            <div class="stat reveal-up" style="--delay: 0.6s">
+                <span class="stat-number" data-count="200">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Проектов</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.7s">
+                <span class="stat-number" data-count="7">0</span>
+                <span class="stat-label">Лет опыта</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.8s">
+                <span class="stat-number" data-count="4">0</span><span class="stat-plus">K</span>
+                <span class="stat-label">Разрешение</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Свадьбы</span><span class="marquee-dot">◆</span>
+                <span>Love Story</span><span class="marquee-dot">◆</span>
+                <span>Реклама</span><span class="marquee-dot">◆</span>
+                <span>Reels</span><span class="marquee-dot">◆</span>
+                <span>Аэросъемка</span><span class="marquee-dot">◆</span>
+                <span>Свадьбы</span><span class="marquee-dot">◆</span>
+                <span>Love Story</span><span class="marquee-dot">◆</span>
+                <span>Реклама</span><span class="marquee-dot">◆</span>
+                <span>Reels</span><span class="marquee-dot">◆</span>
+                <span>Аэросъемка</span><span class="marquee-dot">◆</span>
+                <span>Свадьбы</span><span class="marquee-dot">◆</span>
+                <span>Love Story</span><span class="marquee-dot">◆</span>
+                <span>Реклама</span><span class="marquee-dot">◆</span>
+                <span>Reels</span><span class="marquee-dot">◆</span>
+                <span>Аэросъемка</span><span class="marquee-dot">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Портфолио</span>
+                <h2 class="section-title reveal-up">
+                    Избранные <em>проекты</em>
+                </h2>
+                <p class="section-desc reveal-up">Каждый проект — это уникальная история, рассказанная через объектив кинокамеры</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="portfolio-filters reveal-up">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="wedding">Свадьбы</button>
+                <button class="filter-btn" data-filter="love">Love Story</button>
+                <button class="filter-btn" data-filter="commercial">Реклама</button>
+                <button class="filter-btn" data-filter="drone">Аэросъемка</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item large reveal-up" data-category="wedding">
+                    <div class="portfolio-card">
+                        <img src="images/hero-wedding.jpg" alt="Свадьба Александра и Марии" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Свадьба</span>
+                                <h3>Александр & Мария</h3>
+                                <p>Кишинёв, Молдова</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up" data-category="love">
+                    <div class="portfolio-card">
+                        <img src="images/couple-portrait.jpg" alt="Love Story" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Love Story</span>
+                                <h3>Дмитрий & Анна</h3>
+                                <p>Тирасполь</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up" data-category="wedding">
+                    <div class="portfolio-card">
+                        <img src="images/wedding-prep.jpg" alt="Утро невесты" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Свадьба</span>
+                                <h3>Утро невесты</h3>
+                                <p>Бельцы, Молдова</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up" data-category="commercial">
+                    <div class="portfolio-card">
+                        <img src="images/commercial-shoot.jpg" alt="Рекламный ролик" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Реклама</span>
+                                <h3>Brand Promo</h3>
+                                <p>Коммерческая съемка</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item large reveal-up" data-category="drone">
+                    <div class="portfolio-card">
+                        <img src="images/drone-venue.jpg" alt="Аэросъемка свадьбы" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Аэросъемка</span>
+                                <h3>Свадьба с высоты</h3>
+                                <p>Drone 4K Cinema</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up" data-category="wedding">
+                    <div class="portfolio-card">
+                        <img src="images/reception-party.jpg" alt="Банкет" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Свадьба</span>
+                                <h3>Вечерний банкет</h3>
+                                <p>Кишинёв</p>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Услуги</span>
+                <h2 class="section-title reveal-up">Что я <em>предлагаю</em></h2>
+                <p class="section-desc reveal-up">Полный спектр видеоуслуг для вашего важного события</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card reveal-up" style="--delay: 0.1s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Свадебное кино</h3>
+                    <p class="service-desc">Полный день съемки. Утро жениха и невесты, церемония, банкет, первый танец — всё в кинематографичном стиле.</p>
+                    <ul class="service-features">
+                        <li>Тизер 1–2 мин</li>
+                        <li>Полный фильм 15–30 мин</li>
+                        <li>Drone 4K включён</li>
+                        <li>Цветокоррекция</li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card reveal-up" style="--delay: 0.2s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                    </div>
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Реклама & Бизнес</h3>
+                    <p class="service-desc">Промо-ролики для ресторанов, отелей, брендов и бизнеса. Динамичный монтаж, который продаёт.</p>
+                    <ul class="service-features">
+                        <li>Сценарий и раскадровка</li>
+                        <li>Профессиональный звук</li>
+                        <li>Быстрая отдача</li>
+                        <li>Адаптация для соцсетей</li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card reveal-up" style="--delay: 0.3s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Reels & Контент</h3>
+                    <p class="service-desc">Вирусные ролики для Instagram и TikTok. Крутые переходы, hook-секунды и трендовый монтаж.</p>
+                    <ul class="service-features">
+                        <li>Вертикальный формат 9:16</li>
+                        <li>Trending audio</li>
+                        <li>Color grading</li>
+                        <li>Готово за 3–5 дней</li>
+                    </ul>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card reveal-up" style="--delay: 0.4s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Аэросъемка 4K</h3>
+                    <p class="service-desc">Захватывающие дух кадры с высоты птичьего полёта. Идеально для свадеб, недвижимости и ландшафтов.</p>
+                    <ul class="service-features">
+                        <li>DJI Mavic 3 Pro</li>
+                        <li>Разрешение до 5.1K</li>
+                        <li>Плавные пролёты</li>
+                        <li>Лицензированный пилот</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Процесс</span>
+                <h2 class="section-title reveal-up">Как мы <em>работаем</em></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step reveal-up" style="--delay: 0.1s">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Знакомство</h3>
+                        <p>Обсуждаем вашу историю, пожелания и детали события. Бесплатная консультация.</p>
+                    </div>
+                </div>
+                <div class="process-connector reveal-up"></div>
+                <div class="process-step reveal-up" style="--delay: 0.2s">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Планирование</h3>
+                        <p>Составляем тайминг, выбираем локации, обсуждаем сценарий и стилистику.</p>
+                    </div>
+                </div>
+                <div class="process-connector reveal-up"></div>
+                <div class="process-step reveal-up" style="--delay: 0.3s">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Съемка</h3>
+                        <p>Профессиональная съемка на кинокамеру. Естественно, красиво, без постановки.</p>
+                    </div>
+                </div>
+                <div class="process-connector reveal-up"></div>
+                <div class="process-step reveal-up" style="--delay: 0.4s">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Монтаж & Отдача</h3>
+                        <p>Кинематографичный монтаж, цветокоррекция и отдача материала в течение 2–4 недель.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-up">
+                    <img src="images/commercial-shoot.jpg" alt="VM Film — За кадром">
+                    <div class="about-experience">
+                        <span class="exp-number">7+</span>
+                        <span class="exp-text">лет опыта</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag reveal-up">Обо мне</span>
+                    <h2 class="section-title reveal-up">Вадик <em>Мунжиу</em></h2>
+                    <p class="about-text reveal-up">
+                        Привет! Я — Вадик, профессиональный видеограф из Молдовы. Уже более 7 лет я создаю кинематографичные свадебные фильмы и рекламные ролики.
+                    </p>
+                    <p class="about-text reveal-up">
+                        Мой подход — это минимум постановки и максимум настоящих эмоций. Я использую профессиональное кинооборудование и снимаю в 4K 10-bit для безупречного качества.
+                    </p>
+                    <div class="about-equipment reveal-up">
+                        <h4>Оборудование</h4>
+                        <div class="equipment-tags">
+                            <span class="eq-tag">Sony FX6</span>
+                            <span class="eq-tag">DJI Ronin RS4</span>
+                            <span class="eq-tag">DJI Mavic 3</span>
+                            <span class="eq-tag">Sigma Art</span>
+                            <span class="eq-tag">Rode Wireless</span>
+                            <span class="eq-tag">4K 10-bit</span>
+                        </div>
+                    </div>
+                    <div class="about-social reveal-up">
+                        <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            <span>@vm_film.md</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Отзывы</span>
+                <h2 class="section-title reveal-up">Что говорят <em>клиенты</em></h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal-up" style="--delay: 0.1s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Вадик снял нашу свадьбу невероятно красиво! Каждый раз, когда пересматриваем видео, заново переживаем все эмоции. Настоящее кино!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Анна & Дмитрий</span>
+                            <span class="author-event">Свадьба, Кишинёв</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay: 0.2s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Профессиональный подход и потрясающее качество. Рекламный ролик для нашего ресторана привлёк множество новых клиентов."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Ресторан «La Terrasse»</span>
+                            <span class="author-event">Промо-ролик</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay: 0.3s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Вадик — настоящий мастер. Он поймал именно те моменты, которые мы хотели сохранить навсегда. Спасибо за незабываемый фильм!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Елена & Виктор</span>
+                            <span class="author-event">Love Story, Тирасполь</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag reveal-up">Контакт</span>
+                    <h2 class="section-title reveal-up">Давайте создадим <em>ваше кино</em></h2>
+                    <p class="contact-desc reveal-up">Оставьте заявку и я свяжусь с вами в течение 24 часов для обсуждения деталей вашего проекта.</p>
+                    <div class="contact-methods reveal-up">
+                        <a href="tel:+37377866446" class="contact-method">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Телефон</span>
+                                <span class="method-value">+373 (778) 66-446</span>
+                            </div>
+                        </a>
+                        <a href="https://t.me/vadiq_munzhiu" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Telegram</span>
+                                <span class="method-value">@vadiq_munzhiu</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Instagram</span>
+                                <span class="method-value">@vm_film.md</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" placeholder=" " required>
+                            <label for="formName">Ваше имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" placeholder=" " required>
+                            <label for="formPhone">Телефон / Telegram</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="formService" required>
+                                <option value="" disabled selected>Тип услуги</option>
+                                <option value="wedding">Свадебная съемка</option>
+                                <option value="lovestory">Love Story</option>
+                                <option value="commercial">Реклама / Промо</option>
+                                <option value="reels">Reels / Контент</option>
+                                <option value="drone">Аэросъемка</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="formDate" placeholder=" ">
+                            <label for="formDate">Дата события</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="formMessage" rows="4" placeholder=" "></textarea>
+                            <label for="formMessage">Расскажите о вашем проекте</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Отправить заявку</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo footer-logo">
+                        <span class="logo-v">V</span><span class="logo-m">M</span>
+                        <span class="logo-divider"></span>
+                        <span class="logo-text">film</span>
+                    </a>
+                    <p class="footer-tagline">Кино из ваших лучших моментов</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#portfolio">Портфолио</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#contact">Контакт</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/vm_film.md/" target="_blank" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://t.me/vadiq_munzhiu" target="_blank" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VM Film. Все права защищены.</p>
+                <p class="footer-location">Кишинёв • Тирасполь • Молдова</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
