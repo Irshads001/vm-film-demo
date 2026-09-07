@@ -175,41 +175,71 @@ document.addEventListener('DOMContentLoaded', () => {
         update();
     }
 
-    // === Portfolio Filter ===
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    // === Portfolio Tabs (Свадебный клип / Backstage) ===
+    const tabBtns = document.querySelectorAll('.portfolio-tab-pill-btn');
+    const tabPanes = document.querySelectorAll('.portfolio-tab-pane');
+    const portfolioTag = document.getElementById('portfolioTag');
+    const portfolioTitle = document.getElementById('portfolioTitle');
+    const portfolioDesc = document.getElementById('portfolioDesc');
 
-    filterBtns.forEach(btn => {
+    const tabHeaderData = {
+        clips: {
+            tag: 'Свадебный клип',
+            title: 'Так может выглядеть <em>ваш свадебный клип</em>',
+            desc: 'Каждый проект — это уникальная история, рассказанная через объектив кинокамеры'
+        },
+        backstage: {
+            tag: 'Съемочный процесс',
+            title: 'Съемочный процесс <em>&amp; Backstage</em>',
+            desc: 'Как создается магия кино: постановочные кадры и атмосфера со съемочной площадки'
+        }
+    };
+
+    function switchPortfolioTab(tabKey) {
+        if (!tabHeaderData[tabKey]) return;
+
+        // Update active tab buttons
+        tabBtns.forEach(btn => {
+            const isActive = btn.getAttribute('data-tab') === tabKey;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        // Update active tab panes
+        tabPanes.forEach(pane => {
+            const isTarget = pane.id === (tabKey === 'clips' ? 'paneClips' : 'paneBackstage');
+            if (isTarget) {
+                pane.classList.add('active');
+            } else {
+                pane.classList.remove('active');
+                // Pause any playing videos in the hidden pane
+                pane.querySelectorAll('.portfolio-card-video').forEach(vid => {
+                    vid.pause();
+                });
+            }
+        });
+
+        // Smoothly update section header text
+        if (portfolioTitle && tabHeaderData[tabKey]) {
+            const data = tabHeaderData[tabKey];
+            portfolioTitle.style.opacity = '0';
+            portfolioTitle.style.transform = 'translateY(-6px)';
+            
+            setTimeout(() => {
+                if (portfolioTag) portfolioTag.textContent = data.tag;
+                portfolioTitle.innerHTML = data.title;
+                if (portfolioDesc) portfolioDesc.textContent = data.desc;
+                portfolioTitle.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                portfolioTitle.style.opacity = '1';
+                portfolioTitle.style.transform = 'translateY(0)';
+            }, 160);
+        }
+    }
+
+    tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active state
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filter = btn.getAttribute('data-filter');
-
-            portfolioItems.forEach((item, index) => {
-                const category = item.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    item.classList.remove('hidden');
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, index * 80);
-                } else {
-                    const cardVid = item.querySelector('.portfolio-card-video');
-                    if (cardVid) cardVid.pause();
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        item.classList.add('hidden');
-                    }, 300);
-                }
-            });
+            const tabKey = btn.getAttribute('data-tab');
+            switchPortfolioTab(tabKey);
         });
     });
 

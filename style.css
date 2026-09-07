@@ -865,44 +865,171 @@ img {
     margin-bottom: 48px;
 }
 
-.portfolio-filters {
+/* === Portfolio Tabs Navigation === */
+.portfolio-tabs-wrap {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
+    margin-bottom: 44px;
 }
 
-.filter-btn {
-    padding: 10px 24px;
-    font-size: 0.78rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: transparent;
+.portfolio-tabs-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #F7F3ED;
     border: 1px solid var(--border);
     border-radius: 100px;
-    cursor: pointer;
+    padding: 6px;
+    gap: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.portfolio-tab-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font-family: var(--font-primary);
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
     color: var(--text-medium);
+    cursor: pointer;
     transition: all 0.35s var(--ease-silk);
+    text-decoration: none;
+    outline: none;
 }
 
-.filter-btn:hover {
-    border-color: var(--champagne);
-    background: var(--cream);
+.portfolio-tab-pill-btn:hover {
+    color: var(--text-dark);
+    background: rgba(196, 162, 101, 0.12);
 }
 
-.filter-btn.active {
-    background: var(--gold);
-    border-color: var(--gold);
+.portfolio-tab-pill-btn.active {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
     color: var(--white);
-    box-shadow: 0 4px 16px rgba(196,162,101,0.25);
+    box-shadow: 0 4px 18px rgba(179, 139, 78, 0.35);
+}
+
+.tab-pill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-tab-pill-btn:hover .tab-pill-icon {
+    transform: scale(1.1);
+}
+
+.tab-pill-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 7px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.07);
+    color: var(--text-dark);
+    transition: all 0.35s ease;
+}
+
+.portfolio-tab-pill-btn.active .tab-pill-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--white);
+}
+
+/* === Portfolio Tab Panes === */
+.portfolio-tab-pane {
+    display: none;
+    opacity: 0;
+}
+
+.portfolio-tab-pane.active {
+    display: block;
+    opacity: 1;
+    animation: tabFadeIn 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Featured Showcase for Tab 1 (Wedding Clip) === */
+.portfolio-featured-showcase {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.portfolio-item.featured-cinema {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(28, 22, 19, 0.12);
+}
+
+.portfolio-item.featured-cinema .portfolio-card {
+    min-height: 520px;
+    height: 520px;
+    border-radius: 24px;
+}
+
+.portfolio-item.featured-cinema .portfolio-play {
+    width: 76px;
+    height: 76px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item.featured-cinema:hover .portfolio-play {
+    transform: scale(1.12);
+    background: var(--gold);
+    color: var(--white);
+}
+
+.portfolio-clips-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 26px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.clips-hint-icon {
+    color: var(--gold-dark);
+    font-size: 1rem;
+    animation: gentlePulse 2s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% { opacity: 0.5; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.15); }
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    grid-auto-flow: dense;
 }
 
 .portfolio-item {
@@ -2641,11 +2768,33 @@ img {
     .section-header {
         margin-bottom: 40px;
     }
+
+    .portfolio-item.featured-cinema .portfolio-card {
+        min-height: 380px;
+        height: 380px;
+    }
+
+    .portfolio-tabs-pill {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .portfolio-tab-pill-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 14px;
+        font-size: 0.82rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-badge {
         font-size: 0.65rem;
+    }
+
+    .portfolio-item.featured-cinema .portfolio-card {
+        min-height: 300px;
+        height: 300px;
     }
 
     .portfolio-card {
