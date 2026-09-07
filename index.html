@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VM Film — Профессиональная видеосъемка | Кишинёв • Тирасполь</title>
-    <meta name="description" content="Профессиональная видеосъемка свадеб, рекламы и контента. Вадик Мунжиу — VM Film, Кишинёв и Тирасполь, Молдова.">
+    <meta name="description"
+        content="Профессиональная видеосъемка свадеб, рекламы и контента. Вадик Мунжиу — VM Film, Кишинёв и Тирасполь, Молдова.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-inner">
             <div class="preloader-logo">VM</div>
-            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
         </div>
     </div>
 
@@ -60,8 +67,26 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-bg">
-            <img src="images/hero-wedding.jpg" alt="VM Film Wedding Cinematography" class="hero-bg-img">
+            <video class="hero-bg-video" autoplay loop muted playsinline poster="images/hero-loop-poster.jpg"
+                preload="metadata">
+                <source src="videos/hero-loop.mp4" type="video/mp4">
+            </video>
             <div class="hero-overlay"></div>
+            <button class="hero-sound-btn" id="heroSoundBtn" aria-label="Включить звук" title="Включить звук">
+                <svg class="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <line x1="23" y1="9" x2="17" y2="15" />
+                    <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+                <svg class="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" style="display: none;">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                </svg>
+                <span class="sound-text">Звук</span>
+            </button>
         </div>
         <div class="hero-content">
             <div class="hero-badge reveal-up">
@@ -73,12 +98,14 @@
                 <span class="title-line title-italic reveal-up" style="--delay: 0.25s">лучших моментов</span>
             </h1>
             <p class="hero-subtitle reveal-up" style="--delay: 0.4s">
-                Профессиональная видеосъемка свадеб, рекламных роликов и контента. Каждый кадр — произведение искусства.
+                Профессиональная видеосъемка свадеб. Каждый кадр — произведение искусства.
             </p>
             <div class="hero-actions reveal-up" style="--delay: 0.55s">
                 <a href="#portfolio" class="btn btn-primary">
                     <span>Смотреть работы</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                 </a>
                 <a href="#contact" class="btn btn-outline">Связаться</a>
             </div>
@@ -89,7 +116,7 @@
         </div>
         <div class="hero-stats">
             <div class="stat reveal-up" style="--delay: 0.6s">
-                <span class="stat-number" data-count="200">0</span><span class="stat-plus">+</span>
+                <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
                 <span class="stat-label">Проектов</span>
             </div>
             <div class="stat-divider"></div>
@@ -134,108 +161,193 @@
             <div class="section-header">
                 <span class="section-tag reveal-up">Портфолио</span>
                 <h2 class="section-title reveal-up">
-                    Избранные <em>проекты</em>
+                    Свадебные <em>проекты</em>
                 </h2>
-                <p class="section-desc reveal-up">Каждый проект — это уникальная история, рассказанная через объектив кинокамеры</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="portfolio-filters reveal-up">
-                <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="wedding">Свадьбы</button>
-                <button class="filter-btn" data-filter="love">Love Story</button>
-                <button class="filter-btn" data-filter="commercial">Реклама</button>
-                <button class="filter-btn" data-filter="drone">Аэросъемка</button>
+                <p class="section-desc reveal-up">Каждый проект — это уникальная история, рассказанная через объектив
+                    кинокамеры</p>
             </div>
 
             <!-- Portfolio Grid -->
             <div class="portfolio-grid">
+                <!-- 1. Master Wedding Film (Large) -->
                 <div class="portfolio-item large reveal-up" data-category="wedding">
-                    <div class="portfolio-card">
-                        <img src="images/hero-wedding.jpg" alt="Свадьба Александра и Марии" loading="lazy">
+                    <div class="portfolio-card" data-video="videos/hero-wedding.mp4"
+                        data-title="Анастасия &amp; Виталий — Главный фильм" data-category="Свадьба">
+                        <video class="portfolio-card-video" src="videos/hero-loop.mp4"
+                            poster="images/hero-loop-poster.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">4K Master Film</span>
+                        <span class="portfolio-duration-pill">03:00</span>
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <span class="portfolio-category">Свадьба</span>
-                                <h3>Александр & Мария</h3>
-                                <p>Кишинёв, Молдова</p>
+                                <h3>Анастасия &amp; Виталий</h3>
+                                <p>Кишинёв • Полный фильм 4K</p>
                             </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 2. Love Story -->
                 <div class="portfolio-item reveal-up" data-category="love">
-                    <div class="portfolio-card">
-                        <img src="images/couple-portrait.jpg" alt="Love Story" loading="lazy">
+                    <div class="portfolio-card" data-video="videos/portfolio-lovestory.mp4"
+                        data-title="Дмитрий &amp; Анна — Love Story" data-category="Love Story">
+                        <video class="portfolio-card-video" src="videos/portfolio-lovestory.mp4"
+                            poster="images/thumbs/IMG_0817.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Love Story</span>
+                        <span class="portfolio-duration-pill">HD Cinema</span>
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <span class="portfolio-category">Love Story</span>
-                                <h3>Дмитрий & Анна</h3>
-                                <p>Тирасполь</p>
+                                <h3>Дмитрий &amp; Анна</h3>
+                                <p>Утро в деталях • Эмоции</p>
                             </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 3. Morning Prep -->
                 <div class="portfolio-item reveal-up" data-category="wedding">
-                    <div class="portfolio-card">
-                        <img src="images/wedding-prep.jpg" alt="Утро невесты" loading="lazy">
+                    <div class="portfolio-card" data-video="videos/portfolio-morning.mp4"
+                        data-title="Утро невесты — Нежность и эстетика" data-category="Свадьба">
+                        <video class="portfolio-card-video" src="videos/portfolio-morning.mp4"
+                            poster="images/thumbs/IMG_0816.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Будуар</span>
+                        <span class="portfolio-duration-pill">4K Detail</span>
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <span class="portfolio-category">Свадьба</span>
                                 <h3>Утро невесты</h3>
-                                <p>Бельцы, Молдова</p>
+                                <p>Будуарная эстетика</p>
                             </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item reveal-up" data-category="commercial">
-                    <div class="portfolio-card">
-                        <img src="images/commercial-shoot.jpg" alt="Рекламный ролик" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <span class="portfolio-category">Реклама</span>
-                                <h3>Brand Promo</h3>
-                                <p>Коммерческая съемка</p>
-                            </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 4. Canyon Epic Film (Large) -->
                 <div class="portfolio-item large reveal-up" data-category="drone">
-                    <div class="portfolio-card">
-                        <img src="images/drone-venue.jpg" alt="Аэросъемка свадьбы" loading="lazy">
+                    <div class="portfolio-card" data-video="videos/portfolio-canyon.mp4"
+                        data-title="White Canyon Cinema — Эпичная съемка" data-category="Аэросъемка">
+                        <video class="portfolio-card-video" src="videos/portfolio-canyon.mp4"
+                            poster="images/thumbs/IMG_0866.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">4K Drone &amp; Cinema</span>
+                        <span class="portfolio-duration-pill">4K UHD</span>
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
-                                <span class="portfolio-category">Аэросъемка</span>
-                                <h3>Свадьба с высоты</h3>
-                                <p>Drone 4K Cinema</p>
+                                <span class="portfolio-category">Аэросъемка / Пленэр</span>
+                                <h3>White Canyon Cinema</h3>
+                                <p>Белый каньон • Кинематографичный масштаб</p>
                             </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 5. Ceremony -->
                 <div class="portfolio-item reveal-up" data-category="wedding">
-                    <div class="portfolio-card">
-                        <img src="images/reception-party.jpg" alt="Банкет" loading="lazy">
+                    <div class="portfolio-card" data-video="videos/portfolio-ceremony.mp4"
+                        data-title="Выездная церемония — Клятвы и хрусталь" data-category="Свадьба">
+                        <video class="portfolio-card-video" src="videos/portfolio-ceremony.mp4"
+                            poster="images/thumbs/IMG_9712.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Церемония</span>
+                        <span class="portfolio-duration-pill">Cinema</span>
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <span class="portfolio-category">Свадьба</span>
-                                <h3>Вечерний банкет</h3>
-                                <p>Кишинёв</p>
+                                <h3>Выездная церемония</h3>
+                                <p>Арка с хрусталем • Клятвы</p>
                             </div>
-                            <div class="portfolio-play">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Banquet -->
+                <div class="portfolio-item reveal-up" data-category="wedding">
+                    <div class="portfolio-card" data-video="videos/portfolio-banquet.mp4"
+                        data-title="Вечерний банкет — Драйв и танцы" data-category="Свадьба">
+                        <video class="portfolio-card-video" src="videos/portfolio-banquet.mp4"
+                            poster="images/thumbs/IMG_9007.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Банкет</span>
+                        <span class="portfolio-duration-pill">Live Party</span>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Свадебный банкет</span>
+                                <h3>Вечерний банкет</h3>
+                                <p>Живые эмоции • Танцы • Драйв</p>
+                            </div>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Sensual Love Story -->
+                <div class="portfolio-item reveal-up" data-category="love">
+                    <div class="portfolio-card" data-video="videos/portfolio-sofa.mp4"
+                        data-title="Sensual Moments — Интимная фотосессия" data-category="Love Story">
+                        <video class="portfolio-card-video" src="videos/portfolio-sofa.mp4"
+                            poster="images/thumbs/IMG_0879.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Sensual</span>
+                        <span class="portfolio-duration-pill">4K 60fps</span>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Love Story</span>
+                                <h3>Sensual Moments</h3>
+                                <p>Чувственная съемка для двоих</p>
+                            </div>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Bride Reveal -->
+                <div class="portfolio-item reveal-up" data-category="wedding">
+                    <div class="portfolio-card" data-video="videos/portfolio-doors.mp4"
+                        data-title="Выход невесты — Элегантность и стиль" data-category="Свадьба">
+                        <video class="portfolio-card-video" src="videos/portfolio-doors.mp4"
+                            poster="images/thumbs/IMG_0878.jpg" muted loop playsinline preload="metadata"></video>
+                        <span class="portfolio-badge-pill">Образ невесты</span>
+                        <span class="portfolio-duration-pill">4K Cinema</span>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Свадьба</span>
+                                <h3>Выход невесты</h3>
+                                <p>Локация • Свет • Образ</p>
+                            </div>
+                            <div class="portfolio-play" aria-label="Смотреть видео">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -248,71 +360,282 @@
     <section id="services" class="services section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag reveal-up">Услуги</span>
-                <h2 class="section-title reveal-up">Что я <em>предлагаю</em></h2>
-                <p class="section-desc reveal-up">Полный спектр видеоуслуг для вашего важного события</p>
+                <span class="section-tag reveal-up">Свадебный пакет</span>
+                <h2 class="section-title reveal-up">Пакет услуг <em>видеографа</em></h2>
+                <p class="section-desc reveal-up">Видеосъемка всего свадебного торжества с утра до 00:00 и создание вашего семейного фильма</p>
             </div>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card reveal-up" style="--delay: 0.1s">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+
+            <!-- Main Package Overview Banner -->
+            <div class="package-overview-card reveal-up">
+                <div class="package-overview-header">
+                    <div class="package-badge-wrap">
+                        <span class="package-badge-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            С утра до 00:00
+                        </span>
+                        <span class="package-timeline-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Монтаж 4–5 месяцев
+                        </span>
                     </div>
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">Свадебное кино</h3>
-                    <p class="service-desc">Полный день съемки. Утро жениха и невесты, церемония, банкет, первый танец — всё в кинематографичном стиле.</p>
-                    <ul class="service-features">
-                        <li>Тизер 1–2 мин</li>
-                        <li>Полный фильм 15–30 мин</li>
-                        <li>Drone 4K включён</li>
-                        <li>Цветокоррекция</li>
-                    </ul>
+                    <h3 class="package-overview-title">Съемка всего свадебного торжества</h3>
+                    <p class="package-overview-text">
+                        Видеосъемка всего свадебного торжества с утра до 00:00. Это может быть: утро жениха и невесты, роспись, венчание, прогулка, традиции, банкет, а также бережный монтаж всего отснятого материала в течение 4–5 месяцев.
+                    </p>
                 </div>
-                <!-- Service 2 -->
-                <div class="service-card reveal-up" style="--delay: 0.2s">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                <div class="package-stages-row">
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Утро жениха и невесты</span>
                     </div>
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Реклама & Бизнес</h3>
-                    <p class="service-desc">Промо-ролики для ресторанов, отелей, брендов и бизнеса. Динамичный монтаж, который продаёт.</p>
-                    <ul class="service-features">
-                        <li>Сценарий и раскадровка</li>
-                        <li>Профессиональный звук</li>
-                        <li>Быстрая отдача</li>
-                        <li>Адаптация для соцсетей</li>
-                    </ul>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card reveal-up" style="--delay: 0.3s">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Роспись</span>
                     </div>
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Reels & Контент</h3>
-                    <p class="service-desc">Вирусные ролики для Instagram и TikTok. Крутые переходы, hook-секунды и трендовый монтаж.</p>
-                    <ul class="service-features">
-                        <li>Вертикальный формат 9:16</li>
-                        <li>Trending audio</li>
-                        <li>Color grading</li>
-                        <li>Готово за 3–5 дней</li>
-                    </ul>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card reveal-up" style="--delay: 0.4s">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Венчание</span>
                     </div>
-                    <div class="service-number">04</div>
-                    <h3 class="service-title">Аэросъемка 4K</h3>
-                    <p class="service-desc">Захватывающие дух кадры с высоты птичьего полёта. Идеально для свадеб, недвижимости и ландшафтов.</p>
-                    <ul class="service-features">
-                        <li>DJI Mavic 3 Pro</li>
-                        <li>Разрешение до 5.1K</li>
-                        <li>Плавные пролёты</li>
-                        <li>Лицензированный пилот</li>
-                    </ul>
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Прогулка</span>
+                    </div>
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Традиции</span>
+                    </div>
+                    <div class="package-stage-item">
+                        <span class="stage-dot"></span>
+                        <span class="stage-label">Банкет</span>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Deliverables: Что получает клиент -->
+            <div class="package-section-title-wrap reveal-up">
+                <span class="package-section-number">01</span>
+                <h3 class="package-section-heading">Что получает клиент</h3>
+            </div>
+
+            <div class="deliverables-grid">
+                <!-- 1. Trailer -->
+                <div class="deliverable-card reveal-up" style="--delay: 0.1s">
+                    <div class="deliverable-top">
+                        <span class="deliverable-num">01</span>
+                        <span class="deliverable-duration">до 3 минут</span>
+                    </div>
+                    <h4 class="deliverable-title">Trailer — Love Story</h4>
+                    <p class="deliverable-desc">Видеоролик длительностью до 3 минут — лучшие кадры со всего дня в динамичном кино-монтаже.</p>
+                    <div class="deliverable-footer">
+                        <span class="deliverable-tag">Клип дня</span>
+                    </div>
+                </div>
+
+                <!-- 2. Роспись -->
+                <div class="deliverable-card reveal-up" style="--delay: 0.2s">
+                    <div class="deliverable-top">
+                        <span class="deliverable-num">02</span>
+                        <span class="deliverable-duration">до 10 минут</span>
+                    </div>
+                    <h4 class="deliverable-title">Роспись</h4>
+                    <p class="deliverable-desc">Видео длительностью до 10 минут — официальная роспись (если есть по плану).</p>
+                    <div class="deliverable-footer">
+                        <span class="deliverable-tag">Регистрация</span>
+                    </div>
+                </div>
+
+                <!-- 3. Венчание -->
+                <div class="deliverable-card reveal-up" style="--delay: 0.3s">
+                    <div class="deliverable-top">
+                        <span class="deliverable-num">03</span>
+                        <span class="deliverable-duration">до 10 минут</span>
+                    </div>
+                    <h4 class="deliverable-title">Венчание</h4>
+                    <p class="deliverable-desc">Видео длительностью до 10 минут — таинство церковного венчания (если есть по плану).</p>
+                    <div class="deliverable-footer">
+                        <span class="deliverable-tag">Таинство</span>
+                    </div>
+                </div>
+
+                <!-- 4. Банкет -->
+                <div class="deliverable-card reveal-up" style="--delay: 0.4s">
+                    <div class="deliverable-top">
+                        <span class="deliverable-num">04</span>
+                        <span class="deliverable-duration">90–120 минут</span>
+                    </div>
+                    <h4 class="deliverable-title">Свадебный банкет</h4>
+                    <p class="deliverable-desc">Видео длительностью 90–120 минут — основные интересные моменты с банкета: традиции, тосты, конкурсы, танцы.</p>
+                    <div class="deliverable-footer">
+                        <span class="deliverable-tag">Большой фильм</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Callout Banner -->
+            <div class="package-notes-card reveal-up">
+                <div class="package-note-item">
+                    <div class="note-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                            <line x1="7" y1="2" x2="7" y2="22"/>
+                            <line x1="17" y1="2" x2="17" y2="22"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="note-text">
+                        <strong>Единый фильм:</strong> Пункты 2, 3, 4 соединяются в один фильм.
+                    </div>
+                </div>
+                <div class="package-note-divider"></div>
+                <div class="package-note-item">
+                    <div class="note-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="note-text">
+                        <strong>Тайминг банкета:</strong> Съемка банкета длится до выноса торта, либо до 00:00 (оплата дополнительного времени обговаривается лично).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services: Дополнительные услуги -->
+            <div class="package-section-title-wrap reveal-up" style="margin-top: 60px;">
+                <span class="package-section-number">02</span>
+                <h3 class="package-section-heading">Дополнительные услуги</h3>
+            </div>
+
+            <div class="addons-grid">
+                <!-- Addon 1 -->
+                <div class="addon-card reveal-up" style="--delay: 0.05s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Съемка в другой день</h4>
+                        <p>Съемка Love-Story, росписи или венчания в другой день</p>
+                    </div>
+                </div>
+
+                <!-- Addon 2 -->
+                <div class="addon-card reveal-up" style="--delay: 0.1s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Сырой материал</h4>
+                        <p>Запись сырого материала на ваш жесткий диск</p>
+                    </div>
+                </div>
+
+                <!-- Addon 3 -->
+                <div class="addon-card reveal-up" style="--delay: 0.15s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M6 2v6h12V2"/>
+                            <path d="M10 2v4"/>
+                            <path d="M14 2v4"/>
+                            <rect x="4" y="8" width="16" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Именная флешка</h4>
+                        <p>Именная флешка с готовыми видео</p>
+                    </div>
+                </div>
+
+                <!-- Addon 4 -->
+                <div class="addon-card reveal-up" style="--delay: 0.2s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Съемка после 00:00</h4>
+                        <p>Продление видеосъемки банкета после полуночи</p>
+                    </div>
+                </div>
+
+                <!-- Addon 5 -->
+                <div class="addon-card reveal-up" style="--delay: 0.25s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Монтаж за неделю</h4>
+                        <p>Срочный монтаж свадьбы за одну неделю</p>
+                    </div>
+                </div>
+
+                <!-- Addon 6 -->
+                <div class="addon-card reveal-up" style="--delay: 0.3s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Тизер на второй день</h4>
+                        <p>Тизер на второй день после свадьбы</p>
+                    </div>
+                </div>
+
+                <!-- Addon 7 -->
+                <div class="addon-card reveal-up" style="--delay: 0.35s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Второй оператор</h4>
+                        <p>Второй оператор для многокамерной съемки</p>
+                    </div>
+                </div>
+
+                <!-- Addon 8 -->
+                <div class="addon-card reveal-up" style="--delay: 0.4s">
+                    <div class="addon-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Транспорт для группы</h4>
+                        <p>Транспорт для съемочной группы в течение дня</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="package-cta-wrap reveal-up">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Забронировать дату</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -353,7 +676,7 @@
                     <div class="step-number">04</div>
                     <div class="step-content">
                         <h3>Монтаж & Отдача</h3>
-                        <p>Кинематографичный монтаж, цветокоррекция и отдача материала в течение 2–4 недель.</p>
+                        <p>Кинематографичный монтаж, цветокоррекция и отдача готового фильма в течение 4–5 месяцев.</p>
                     </div>
                 </div>
             </div>
@@ -365,7 +688,20 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image reveal-up">
-                    <img src="images/commercial-shoot.jpg" alt="VM Film — За кадром">
+                    <div class="about-video-wrap" data-video="videos/about-vadik.mp4"
+                        data-title="Вадик Мунжиу — Backstage со съемок" data-category="Обо мне">
+                        <video class="about-video" src="videos/about-vadik.mp4" poster="images/thumbs/IMG_9912.jpg"
+                            autoplay loop muted playsinline preload="metadata"></video>
+                        <div class="about-video-badge">
+                            <span class="rec-dot"></span>
+                            <span>Backstage • Вадик на съемках</span>
+                        </div>
+                        <div class="about-video-play" aria-label="Смотреть backstage">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                        </div>
+                    </div>
                     <div class="about-experience">
                         <span class="exp-number">7+</span>
                         <span class="exp-text">лет опыта</span>
@@ -375,25 +711,19 @@
                     <span class="section-tag reveal-up">Обо мне</span>
                     <h2 class="section-title reveal-up">Вадик <em>Мунжиу</em></h2>
                     <p class="about-text reveal-up">
-                        Привет! Я — Вадик, профессиональный видеограф из Молдовы. Уже более 7 лет я создаю кинематографичные свадебные фильмы и рекламные ролики.
+                        Привет! Я — Вадик, профессиональный видеограф из Молдовы. Уже более 7 лет я создаю
+                        кинематографичные свадебные фильмы и рекламные ролики.
                     </p>
-                    <p class="about-text reveal-up">
-                        Мой подход — это минимум постановки и максимум настоящих эмоций. Я использую профессиональное кинооборудование и снимаю в 4K 10-bit для безупречного качества.
-                    </p>
-                    <div class="about-equipment reveal-up">
-                        <h4>Оборудование</h4>
-                        <div class="equipment-tags">
-                            <span class="eq-tag">Sony FX6</span>
-                            <span class="eq-tag">DJI Ronin RS4</span>
-                            <span class="eq-tag">DJI Mavic 3</span>
-                            <span class="eq-tag">Sigma Art</span>
-                            <span class="eq-tag">Rode Wireless</span>
-                            <span class="eq-tag">4K 10-bit</span>
-                        </div>
-                    </div>
+
                     <div class="about-social reveal-up">
-                        <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="social-link"
+                            aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
                             <span>@vm_film.md</span>
                         </a>
                     </div>
@@ -402,44 +732,333 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials section">
+    <!-- Reviews Section (Instagram Stories) -->
+    <section id="reviews" class="testimonials section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag reveal-up">Отзывы</span>
-                <h2 class="section-title reveal-up">Что говорят <em>клиенты</em></h2>
+                <span class="section-tag reveal-up">Живые отзывы</span>
+                <h2 class="section-title reveal-up">Истории и <em>эмоции пар</em></h2>
+                <p class="section-desc reveal-up">Искренние сообщения и впечатления наших молодоженов из Instagram Stories после просмотра своих свадебных фильмов</p>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card reveal-up" style="--delay: 0.1s">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Вадик снял нашу свадьбу невероятно красиво! Каждый раз, когда пересматриваем видео, заново переживаем все эмоции. Настоящее кино!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">Анна & Дмитрий</span>
-                            <span class="author-event">Свадьба, Кишинёв</span>
+
+            <div class="reviews-slider-container reveal-up">
+                <!-- Navigation Prev/Next -->
+                <button class="reviews-slider-btn prev" id="reviewsPrev" aria-label="Предыдущий отзыв">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+
+                <div class="reviews-track-wrapper" id="reviewsTrackWrapper">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <!-- Card 1 -->
+                        <div class="review-story-card" data-index="0" data-img="images/reviews/review-1.jpg" data-author="@tanyas_01" data-cat="Свадебный клип">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@tanyas_01</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-1.jpg" alt="Отзыв @tanyas_01" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебный фильм</span>
+                                    <p class="story-text-preview">«Вау!! Красота! Спасибо большое, очень круто получилось...»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="review-story-card" data-index="1" data-img="images/reviews/review-2.jpg" data-author="@alexandrboiko99" data-cat="Аэросъемка & Клип">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@alexandrboiko99</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-2.jpg" alt="Отзыв @alexandrboiko99" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебное торжество</span>
+                                    <p class="story-text-preview">«Вадим, спасибо большое, видос просто бомба!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="review-story-card" data-index="2" data-img="images/reviews/review-3.jpg" data-author="@_mihaela20" data-cat="Видеоклип">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@_mihaela20</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-3.jpg" alt="Отзыв @_mihaela20" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебный клип</span>
+                                    <p class="story-text-preview">«Mulțumim, foarte mult ne-a plăcut ambele video-uri!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="review-story-card" data-index="3" data-img="images/reviews/review-4.jpg" data-author="@tatarovva_" data-cat="Свадебный тизер">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@tatarovva_</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-4.jpg" alt="Отзыв @tatarovva_" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебный тизер</span>
+                                    <p class="story-text-preview">«Я посмотрела короткое видео, я в шоке, как красиво! Спасибо большое!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="review-story-card" data-index="4" data-img="images/reviews/review-5.jpg" data-author="@erhan_natalia" data-cat="Свадебный фильм">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@erhan_natalia</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-5.jpg" alt="Отзыв @erhan_natalia" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебный фильм</span>
+                                    <p class="story-text-preview">«Спасибо за вашу работу, видно что работали профессионалы. Качество идеальное!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="review-story-card" data-index="5" data-img="images/reviews/review-6.jpg" data-author="@vasiltov_ana" data-cat="Полный свадебный день">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@vasiltov_ana</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-6.jpg" alt="Отзыв @vasiltov_ana" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Полный свадебный день</span>
+                                    <p class="story-text-preview">«Ты поймал самые важные моменты и сделал это незаметно и профессионально!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="review-story-card" data-index="6" data-img="images/reviews/review-7.jpg" data-author="@butenko__beauty_" data-cat="Свадебное видео">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@butenko__beauty_</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-7.jpg" alt="Отзыв @butenko__beauty_" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебное видео</span>
+                                    <p class="story-text-preview">«Еще раз спасибо за видео, они классные и очень душевные. Все в восторге!»</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="review-story-card" data-index="7" data-img="images/reviews/review-8.jpg" data-author="@sasha_volkova01" data-cat="Свадебный тизер">
+                            <div class="story-card-inner">
+                                <div class="story-card-header">
+                                    <div class="story-user-badge">
+                                        <svg class="ig-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                        <span class="story-user-name">@sasha_volkova01</span>
+                                    </div>
+                                    <span class="story-status-dot"></span>
+                                </div>
+                                <div class="story-card-media">
+                                    <img src="images/reviews/review-8.jpg" alt="Отзыв @sasha_volkova01" loading="lazy">
+                                    <div class="story-card-overlay">
+                                        <div class="story-zoom-badge">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                                            </svg>
+                                            <span>Смотреть отзыв</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-footer">
+                                    <span class="story-film-type">Свадебный тизер</span>
+                                    <p class="story-text-preview">«Мы все посмотрели, мы в восторге. Я тизер уже раз 20 пересмотрела, молодец!»</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal-up" style="--delay: 0.2s">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Профессиональный подход и потрясающее качество. Рекламный ролик для нашего ресторана привлёк множество новых клиентов."</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">Ресторан «La Terrasse»</span>
-                            <span class="author-event">Промо-ролик</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal-up" style="--delay: 0.3s">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Вадик — настоящий мастер. Он поймал именно те моменты, которые мы хотели сохранить навсегда. Спасибо за незабываемый фильм!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">Елена & Виктор</span>
-                            <span class="author-event">Love Story, Тирасполь</span>
-                        </div>
-                    </div>
-                </div>
+
+                <button class="reviews-slider-btn next" id="reviewsNext" aria-label="Следующий отзыв">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="reviews-dots" id="reviewsDots"></div>
+
+            <!-- Instagram Proof Link Button -->
+            <div class="reviews-cta-wrap reveal-up">
+                <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="reviews-ig-cta-btn">
+                    <span class="ig-gradient-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </span>
+                    <span class="reviews-cta-text">Смотреть все отзывы в актуальном Instagram <strong>@vm_film.md</strong></span>
+                    <svg class="cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -451,29 +1070,45 @@
                 <div class="contact-info">
                     <span class="section-tag reveal-up">Контакт</span>
                     <h2 class="section-title reveal-up">Давайте создадим <em>ваше кино</em></h2>
-                    <p class="contact-desc reveal-up">Оставьте заявку и я свяжусь с вами в течение 24 часов для обсуждения деталей вашего проекта.</p>
+                    <p class="contact-desc reveal-up">Оставьте заявку и я свяжусь с вами в течение 24 часов для
+                        обсуждения деталей вашего проекта.</p>
                     <div class="contact-methods reveal-up">
-                        <a href="tel:+37377866446" class="contact-method">
+                        <div class="contact-method contact-method-phones">
                             <div class="method-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
                             </div>
                             <div class="method-info">
                                 <span class="method-label">Телефон</span>
-                                <span class="method-value">+373 (778) 66-446</span>
+                                <div class="method-phone-list">
+                                    <a href="tel:+37377866446" class="method-phone-link">+373 (778) 66-446</a>
+                                    <a href="tel:+37369113023" class="method-phone-link">+373 (69) 113-023</a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="https://t.me/vadiq_munzhiu" target="_blank" class="contact-method">
+                        </div>
+                        <a href="https://t.me/vadiqqqqqq" target="_blank" class="contact-method">
                             <div class="method-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                                </svg>
                             </div>
                             <div class="method-info">
                                 <span class="method-label">Telegram</span>
-                                <span class="method-value">@vadiq_munzhiu</span>
+                                <span class="method-value">@vadiqqqqqq</span>
                             </div>
                         </a>
                         <a href="https://www.instagram.com/vm_film.md/" target="_blank" class="contact-method">
                             <div class="method-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
                             </div>
                             <div class="method-info">
                                 <span class="method-label">Instagram</span>
@@ -513,8 +1148,13 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
                             <span>Отправить заявку</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
                         </button>
+                        <div class="form-status" id="formStatus" style="display: none;"></div>
                     </form>
                 </div>
             </div>
@@ -541,10 +1181,18 @@
                 </div>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/vm_film.md/" target="_blank" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
                     </a>
-                    <a href="https://t.me/vadiq_munzhiu" target="_blank" aria-label="Telegram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    <a href="https://t.me/vadiqqqqqq" target="_blank" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -555,6 +1203,69 @@
         </div>
     </footer>
 
+    <!-- Video Modal Lightbox -->
+    <div id="videoModal" class="video-modal" aria-hidden="true" role="dialog">
+        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+        <div class="video-modal-dialog">
+            <button class="video-modal-close" id="videoModalClose" aria-label="Закрыть">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="video-modal-header">
+                <span class="video-modal-category" id="videoModalCategory">Свадьба</span>
+                <h3 class="video-modal-title" id="videoModalTitle">Название проекта</h3>
+            </div>
+            <div class="video-modal-video-container">
+                <video id="modalVideoPlayer" controls playsinline preload="auto"></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Story Lightbox Modal -->
+    <div id="reviewModal" class="review-modal" aria-hidden="true" role="dialog">
+        <div class="review-modal-backdrop" id="reviewModalBackdrop"></div>
+        <div class="review-modal-dialog">
+            <button class="review-modal-close" id="reviewModalClose" aria-label="Закрыть отзыв">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="review-modal-header">
+                <div class="review-modal-author">
+                    <svg class="ig-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span id="reviewModalAuthor">@tanyas_01</span>
+                </div>
+                <span class="review-modal-category" id="reviewModalCategory">Свадебный фильм</span>
+            </div>
+            <div class="review-modal-body">
+                <img id="reviewModalImg" src="" alt="Отзыв из Instagram Stories">
+            </div>
+            <div class="review-modal-nav">
+                <button class="review-modal-nav-btn prev" id="reviewModalPrev" aria-label="Предыдущий отзыв">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                    <span>Назад</span>
+                </button>
+                <span class="review-modal-counter" id="reviewModalCounter">1 / 8</span>
+                <button class="review-modal-nav-btn next" id="reviewModalNext" aria-label="Следующий отзыв">
+                    <span>Далее</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
