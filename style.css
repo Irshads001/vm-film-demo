@@ -3,6 +3,63 @@
    Color Palette: Warm Champagne, Cream, Blush
    ============================================ */
 
+/* === Custom Fonts (Hirro Sans) === */
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hirro Sans';
+    src: url('fonts/HirroSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* === CSS Variables === */
 :root {
     /* Soft Luxury Palette */
@@ -21,6 +78,7 @@
 
     /* Typography */
     --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-heading: 'Hirro Sans', 'Montserrat', 'Inter', -apple-system, sans-serif;
     --font-body:    'Inter', -apple-system, sans-serif;
 
     /* Spacing */
@@ -501,7 +559,7 @@ img {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 760px;
     padding: 0 var(--container-px);
     margin-top: 40px;
 }
@@ -537,21 +595,25 @@ img {
 }
 
 .hero-title {
-    font-family: var(--font-display);
-    line-height: 1.1;
+    font-family: var(--font-heading);
+    line-height: 1.15;
     margin-bottom: 24px;
+    text-transform: uppercase;
 }
 
 .title-line {
     display: block;
-    font-size: clamp(2.8rem, 6vw, 4.8rem);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
     color: var(--text-dark);
 }
 
 .title-italic {
-    font-style: italic;
+    font-style: normal;
     font-weight: 300;
+    letter-spacing: 0.05em;
     color: var(--gold-dark);
 }
 

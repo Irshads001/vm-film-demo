@@ -1,3 +1,5 @@
 videos/originals/
 *.tmp
 .DS_Store
+fonts_extracted/
+hirro_sans.zip
