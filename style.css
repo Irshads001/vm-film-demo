@@ -103,6 +103,9 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--champagne) var(--cream);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -110,6 +113,9 @@ body {
     background: var(--cream);
     color: var(--text-dark);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -234,9 +240,11 @@ img {
     padding: 0 var(--container-px);
 }
 
-.section {
+.section,
+section[id] {
     padding: var(--section-py) 0;
     position: relative;
+    scroll-margin-top: 80px;
 }
 
 /* === Navigation === */
@@ -2628,184 +2636,6 @@ img {
     transform: translateY(0);
 }
 
-/* === Responsive === */
-@media (max-width: 1024px) {
-    :root {
-        --section-py: 80px;
-    }
-
-    .nav-links { display: none; }
-    .nav-cta { display: none; }
-    .hamburger { display: flex; }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .portfolio-item.large {
-        grid-column: span 1;
-    }
-
-    .about-grid {
-        gap: 40px;
-    }
-
-    .contact-wrapper {
-        gap: 50px;
-    }
-
-    .hero-stats {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 40px;
-        display: inline-flex;
-    }
-
-    .process-timeline {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .process-connector {
-        width: 1px;
-        height: 40px;
-    }
-
-    .deliverables-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .addons-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --section-py: 60px;
-    }
-
-    .hero-content {
-        margin-top: 80px;
-    }
-
-    .hero-stats {
-        gap: 20px;
-        padding: 20px 24px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .package-overview-card {
-        padding: 32px 24px;
-    }
-
-    .package-notes-card {
-        flex-direction: column;
-        gap: 16px;
-        padding: 20px;
-    }
-
-    .package-note-divider {
-        width: 100%;
-        height: 1px;
-    }
-
-    .deliverables-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .addons-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        height: 350px;
-    }
-
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .form-group.full-width,
-    .contact-form .btn {
-        grid-column: span 1;
-    }
-
-    .contact-form-wrapper {
-        padding: 28px;
-    }
-
-    .footer-top {
-        flex-direction: column;
-        gap: 24px;
-        text-align: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 4px;
-    }
-
-    .section-header {
-        margin-bottom: 40px;
-    }
-
-    .portfolio-item.featured-cinema .portfolio-card {
-        min-height: 380px;
-        height: 380px;
-    }
-
-    .portfolio-tabs-pill {
-        width: 100%;
-        max-width: 440px;
-    }
-
-    .portfolio-tab-pill-btn {
-        flex: 1;
-        justify-content: center;
-        padding: 10px 14px;
-        font-size: 0.82rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-badge {
-        font-size: 0.65rem;
-    }
-
-    .portfolio-item.featured-cinema .portfolio-card {
-        min-height: 300px;
-        height: 300px;
-    }
-
-    .portfolio-card {
-        min-height: 320px;
-    }
-
-    .about-video-wrap {
-        height: 380px;
-    }
-}
-
 /* === Video Modal Lightbox === */
 .video-modal {
     position: fixed;
@@ -2926,25 +2756,880 @@ img {
     background: #000;
 }
 
-@media (max-width: 768px) {
-    .video-modal {
-        padding: 12px;
+/* ============================================
+   RESPONSIVE DESIGN SYSTEM (Mobile & Tablet)
+   ============================================ */
+
+/* === Tablet Breakpoint (max-width: 1024px) === */
+@media (max-width: 1024px) {
+    :root {
+        --section-py: 80px;
     }
 
-    .video-modal-dialog {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+
+    /* Hero Section Stack */
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        min-height: 100vh;
+        padding: 130px 0 60px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+        padding: 0 var(--container-px);
+        text-align: left;
+    }
+
+    .hero-stats {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 36px var(--container-px) 0;
+        width: calc(100% - 2 * var(--container-px));
+        max-width: 560px;
+        align-self: flex-start;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* Grids */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .portfolio-item.large,
+    .portfolio-item.featured-cinema {
+        grid-column: span 1;
+    }
+
+    .deliverables-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* Process Timeline */
+    .process-timeline {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .process-step {
+        width: 100%;
+        max-width: 360px;
+        padding: 10px 16px;
+    }
+
+    .process-connector {
+        width: 2px;
+        height: 36px;
+        margin: 0 auto;
+        background: linear-gradient(180deg, var(--champagne), var(--rose));
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-video-wrap {
+        height: 420px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+/* === Mobile Landscape & Portrait (max-width: 768px) === */
+@media (max-width: 768px) {
+    :root {
+        --section-py: 56px;
+    }
+
+    /* Global Container Safety */
+    .container,
+    .nav-container {
+        padding: 0 var(--container-px);
+        max-width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 110px 0 50px;
+        min-height: 100svh;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding: 0 var(--container-px);
+        max-width: 100%;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        padding: 7px 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        margin-bottom: 18px;
+    }
+
+    .title-line {
+        font-size: clamp(1.6rem, 7vw, 2.3rem);
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        max-width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.82rem;
+    }
+
+    .hero-stats {
+        position: relative;
+        margin: 28px auto 0;
+        width: calc(100% - 2 * var(--container-px));
+        max-width: 100%;
+        padding: 16px 14px;
+        gap: 12px;
+        border-radius: 16px;
+        justify-content: space-around;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-plus {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-sound-btn {
+        top: 82px;
+        right: var(--container-px);
+        bottom: auto;
+        left: auto;
+        padding: 7px 14px;
+        font-size: 0.72rem;
+        z-index: 10;
+        border-radius: 100px;
+    }
+
+    .hero-scroll {
+        display: none !important;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.2rem);
+        line-height: 1.2;
+    }
+
+    .section-desc {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    /* Portfolio Tabs & Grid */
+    .portfolio-tabs-container {
+        margin-bottom: 28px;
+        width: 100%;
+    }
+
+    .portfolio-tabs-pill {
+        width: 100%;
+        max-width: 440px;
+        padding: 5px;
+        gap: 5px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .portfolio-tab-pill-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 10px;
+        font-size: 0.8rem;
+        gap: 7px;
+    }
+
+    .tab-pill-count {
+        height: 20px;
+        min-width: 20px;
+        font-size: 0.68rem;
+        padding: 0 5px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .portfolio-item,
+    .portfolio-item.large,
+    .portfolio-item.featured-cinema {
+        grid-column: span 1 !important;
+        width: 100%;
+    }
+
+    .portfolio-card,
+    .portfolio-item.featured-cinema .portfolio-card {
+        min-height: 280px;
+        height: 320px;
         border-radius: 18px;
     }
 
+    .portfolio-overlay {
+        padding: 20px 16px;
+    }
+
+    .portfolio-info {
+        max-width: calc(100% - 56px);
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin-bottom: 2px;
+    }
+
+    .portfolio-info p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .portfolio-play {
+        width: 44px;
+        height: 44px;
+    }
+
+    .portfolio-play svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .portfolio-badge-pill {
+        top: 14px;
+        left: 14px;
+        font-size: 0.65rem;
+        padding: 5px 12px;
+    }
+
+    .portfolio-duration-pill {
+        top: 14px;
+        right: 14px;
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+
+    /* Services & Wedding Package */
+    .package-overview-card {
+        padding: 26px 18px;
+        border-radius: 18px;
+        margin-bottom: 32px;
+    }
+
+    .package-badge-wrap {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .package-badge-pill,
+    .package-timeline-pill {
+        font-size: 0.68rem;
+        padding: 5px 12px;
+    }
+
+    .package-overview-title {
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+        line-height: 1.3;
+    }
+
+    .package-overview-text {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    .package-stages-row {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 18px;
+        align-items: flex-start;
+    }
+
+    .stage-label {
+        font-size: 0.82rem;
+    }
+
+    .deliverables-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .deliverable-card {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .deliverable-num {
+        font-size: 1.6rem;
+    }
+
+    .deliverable-title {
+        font-size: 1.25rem;
+    }
+
+    .deliverable-desc {
+        font-size: 0.84rem;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+
+    .package-notes-card {
+        flex-direction: column;
+        padding: 18px 16px;
+        gap: 14px;
+        border-radius: 16px;
+    }
+
+    .package-note-item {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .note-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .note-text {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    .package-note-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .addon-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .addon-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 10px;
+    }
+
+    .addon-content h4 {
+        font-size: 0.88rem;
+    }
+
+    .addon-content p {
+        font-size: 0.78rem;
+    }
+
+    .package-cta-wrap {
+        margin-top: 32px;
+    }
+
+    /* Process */
+    .process-step {
+        width: 100%;
+        max-width: 320px;
+        padding: 8px 10px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto 12px;
+    }
+
+    .step-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .step-content p {
+        font-size: 0.82rem;
+    }
+
+    .process-connector {
+        width: 2px;
+        height: 32px;
+        margin: 0 auto;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-video-wrap {
+        height: 330px;
+        max-width: 100%;
+        border-radius: 18px;
+    }
+
+    .about-video-badge {
+        top: 12px;
+        left: 12px;
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .about-video-play {
+        bottom: 12px;
+        left: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .about-experience {
+        bottom: 12px;
+        right: 12px;
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    .exp-number {
+        font-size: 1.5rem;
+    }
+
+    .exp-text {
+        font-size: 0.62rem;
+    }
+
+    .about-content .section-title {
+        text-align: left;
+        font-size: 1.85rem;
+        margin-bottom: 16px;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+    .about-equipment {
+        margin-top: 24px;
+        padding-top: 20px;
+    }
+
+    .equipment-tags {
+        gap: 6px;
+    }
+
+    .eq-tag {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+
+    .about-social {
+        margin-top: 20px;
+    }
+
+    .social-link {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    /* Reviews (Instagram Stories Slider & Modal) */
+    .reviews-slider-container {
+        margin-top: 30px;
+    }
+
+    .reviews-slider-btn.prev,
+    .reviews-slider-btn.next {
+        display: none !important;
+    }
+
+    .review-story-card {
+        flex: 0 0 85%;
+    }
+
+    .story-card-inner {
+        border-radius: 18px;
+    }
+
+    .story-card-footer {
+        padding: 12px 14px 14px;
+    }
+
+    .story-text-preview {
+        font-size: 0.88rem;
+    }
+
+    .reviews-dots {
+        margin-top: 22px;
+    }
+
+    .reviews-cta-wrap {
+        margin-top: 28px;
+    }
+
+    .reviews-ig-cta-btn {
+        padding: 12px 22px;
+        font-size: 0.84rem;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-info .section-title {
+        text-align: left;
+        font-size: 1.85rem;
+        margin-bottom: 14px;
+    }
+
+    .contact-desc {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        margin-bottom: 22px;
+    }
+
+    .contact-methods {
+        gap: 12px;
+    }
+
+    .contact-method {
+        padding: 14px 16px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .method-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 10px;
+    }
+
+    .method-label {
+        font-size: 0.65rem;
+    }
+
+    .method-value,
+    .method-phone-link {
+        font-size: 0.88rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .form-group.full-width,
+    .contact-form .btn,
+    .form-status {
+        grid-column: span 1 !important;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px !important;
+        padding: 14px 16px;
+        border-radius: 12px;
+    }
+
+    .contact-form .btn {
+        padding: 14px 20px;
+        font-size: 0.82rem;
+        margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 44px 0 24px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .footer-nav a {
+        font-size: 0.78rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+        font-size: 0.74rem;
+    }
+
+    /* Modals Responsive */
+    .video-modal {
+        padding: 10px;
+    }
+
+    .video-modal-dialog {
+        border-radius: 16px;
+        max-width: 100%;
+    }
+
     .video-modal-header {
-        padding: 16px 20px 12px;
+        padding: 14px 16px 10px;
+        padding-right: 50px;
+    }
+
+    .video-modal-close {
+        top: 10px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
     }
 
     .video-modal-title {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
+    }
+
+    .video-modal-video-container {
+        min-height: 180px;
+        max-height: 52vh;
     }
 
     .video-modal-video-container video {
-        max-height: 65vh;
+        max-height: 52vh;
+    }
+
+    .review-modal {
+        padding: 10px;
+    }
+
+    .review-modal-dialog {
+        border-radius: 16px;
+        max-width: 100%;
+    }
+
+    .review-modal-close {
+        top: 10px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .review-modal-header {
+        padding: 12px 16px;
+        padding-right: 50px;
+    }
+
+    .review-modal-body {
+        max-height: 58vh;
+    }
+
+    .review-modal-body img {
+        max-height: 58vh;
     }
 }
+
+/* === Small Smartphone Breakpoint (max-width: 480px) === */
+@media (max-width: 480px) {
+    :root {
+        --section-py: 48px;
+        --container-px: 16px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 95px 0 36px;
+    }
+
+    .title-line {
+        font-size: clamp(1.4rem, 6.6vw, 1.95rem);
+    }
+
+    .hero-badge {
+        font-size: 0.68rem;
+        padding: 6px 14px;
+        margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 22px;
+    }
+
+    .hero-stats {
+        padding: 14px 8px;
+        gap: 6px;
+        margin: 22px auto 0;
+    }
+
+    .stat-number {
+        font-size: 1.55rem;
+    }
+
+    .stat-plus {
+        font-size: 1.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.62rem;
+    }
+
+    .hero-sound-btn {
+        top: 72px;
+        padding: 6px 10px;
+        font-size: 0.68rem;
+    }
+
+    /* Portfolio */
+    .portfolio-tabs-pill {
+        padding: 3px;
+        gap: 3px;
+    }
+
+    .portfolio-tab-pill-btn {
+        padding: 9px 6px;
+        font-size: 0.74rem;
+        gap: 5px;
+    }
+
+    .portfolio-card,
+    .portfolio-item.featured-cinema .portfolio-card {
+        min-height: 270px;
+        height: 300px;
+        border-radius: 16px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .portfolio-play {
+        width: 40px;
+        height: 40px;
+    }
+
+    .portfolio-play svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* About */
+    .about-video-wrap {
+        height: 280px;
+        border-radius: 16px;
+    }
+
+    .about-experience {
+        padding: 8px 12px;
+        border-radius: 10px;
+    }
+
+    .exp-number {
+        font-size: 1.35rem;
+    }
+
+    .exp-text {
+        font-size: 0.58rem;
+    }
+
+    /* Reviews */
+    .review-story-card {
+        flex: 0 0 88%;
+    }
+
+    /* Contact */
+    .contact-form-wrapper {
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+}
+
 
