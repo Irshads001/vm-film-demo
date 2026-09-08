@@ -869,15 +869,17 @@ section[id] {
     background: var(--white);
 }
 
-.portfolio .section-header {
-    margin-bottom: 48px;
-}
-
-/* === Portfolio Tabs Navigation === */
+/* === Portfolio Tabs Navigation (Top of Section) === */
 .portfolio-tabs-wrap {
     display: flex;
     justify-content: center;
-    margin-bottom: 44px;
+    margin-bottom: 34px;
+}
+
+/* === Dynamic Section Header (Directly Below Tabs) === */
+.portfolio .section-header,
+.portfolio-section-header {
+    margin-bottom: 46px;
 }
 
 .portfolio-tabs-pill {
@@ -2984,9 +2986,15 @@ section[id] {
     }
 
     /* Portfolio Tabs & Grid */
+    .portfolio-tabs-wrap,
     .portfolio-tabs-container {
-        margin-bottom: 28px;
+        margin-bottom: 22px;
         width: 100%;
+    }
+
+    .portfolio .section-header,
+    .portfolio-section-header {
+        margin-bottom: 28px;
     }
 
     .portfolio-tabs-pill {
